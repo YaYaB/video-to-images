@@ -77,7 +77,7 @@ def parse_video(cap, base_path, step, size):
             frame = cv2.resize(frame, (new_w, new_h))
         # Resize with width and height given
         elif len(size) == 2:
-            frame = cv2.resize(frame, size)
+            frame = cv2.resize(frame, tuple(size))
         dump_image(frame, base_path + suffix)
 
         # Append index
